@@ -12,6 +12,17 @@ class Lion extends Animal{
         System.out.print("I am from Lion class");
     }
 }
+//Method Overloading - same class ,same name method with different parameters or type
+class Addition{
+    public int addition(int a,int b)
+    {
+        return a+b;
+    }
+    public int addition(int a,int b,int c)
+    {
+        return a+b+c;
+    }
+}
 
 public class Polymorphism {
     public static void main(String[] args) {
@@ -22,5 +33,11 @@ public class Polymorphism {
         animal.printAnimalTwo();
         lion.printAnimalTwo();
 
+
+        //Method overloading
+        Addition add=new Addition();
+        System.out.print(add.addition(25,25));
+        System.out.print("\n");
+        System.out.print(add.addition(25,25,25));
     }
 }
